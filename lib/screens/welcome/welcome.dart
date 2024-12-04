@@ -2,8 +2,9 @@
 
 import 'package:fftv/screens/welcome/widgets/AppleLoginButton.dart';
 import 'package:fftv/screens/welcome/widgets/GoogleLoginButton.dart';
+import 'package:fftv/screens/welcome/widgets/OverlapScreenContent.dart';
 import 'package:fftv/utils/screen_size_config.dart';
-import 'package:fftv/widgets/PrimaryButton.dart';
+import 'package:fftv/widgets/primary_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:video_player/video_player.dart';
@@ -22,7 +23,9 @@ class _WelcomeState extends State<Welcome> {
   double screenHeight = ScreenSizeConfig.screenHeight;
   double screenWidth = ScreenSizeConfig.screenWidth;
 
+void handleClickSignup(){
 
+}
 
   @override
   void initState() {
@@ -45,6 +48,7 @@ class _WelcomeState extends State<Welcome> {
     _controller.dispose();
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,38 +74,9 @@ class _WelcomeState extends State<Welcome> {
                 ),
               ),
             ),
-Center(
-  child:Column(
-    mainAxisAlignment: MainAxisAlignment.center,
-    children: [
-      Text(textAlign: TextAlign.center ,"Effortlessly Discover \nYour Ideal Match",style: R.textStyle.onboardingTitle().copyWith(
-fontSize: 26
-      ),),
 
-     SizedBox(height: 10,),
-     Padding(padding: EdgeInsets.symmetric(horizontal: 30),
-     child:  Text(textAlign: TextAlign.center ,
-       'Experience a seamless journey  uncovering the ideal match that aligns with your preferences and aspirations',
-       style: R.textStyle.onboardingDescription().copyWith(
-         color: R.themeProvider.colors.title.withOpacity(0.5),
-         fontWeight: FontWeight.w400
-       ),
-     ),
-     ),
+          const OverlapScreenContent()
 
-   SizedBox(height: 20,),
-      GoogleLoginButton(),
-      SizedBox(height: 15,),
-      AppleLoginButton(),
-      SizedBox(height: 15,),
-
-      PrimaryButton(title: 'Use phone number',borderRadius: 15,),
-
-
-
-    ],
-  ) ,
-)
 
           ],
         )

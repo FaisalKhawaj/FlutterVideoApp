@@ -4,7 +4,7 @@ import 'package:fftv/routes/app_routes.dart';
 import 'package:fftv/screens/onboarding/widgets/BottomExploreWrapper.dart';
 import 'package:fftv/screens/onboarding/widgets/ImageSlider.dart';
 import 'package:fftv/utils/screen_size_config.dart';
-import 'package:fftv/widgets/PrimaryButton.dart';
+import 'package:fftv/widgets/primary_button.dart';
 import 'package:flutter/material.dart';
 import 'package:fftv/resources/resources.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -26,14 +26,17 @@ class Onboarding extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
+
     void handleClickSignIn(){
-      Get.toNamed(Routes.welcome);
+      Get.toNamed(Routes.login);
     }
     void handleClickSignup(){
-      Get.toNamed(Routes.welcome);
+      Get.toNamed(Routes.signup);
     }
     
-    void handleClickWatchNow(){}
+    void handleClickWatchNow(){
+      Get.toNamed(Routes.welcome);
+    }
     return Scaffold(
       body: Container(
         width:ScreenSizeConfig.screenWidth,

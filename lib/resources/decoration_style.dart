@@ -34,7 +34,16 @@ class AppDecoration{
   BoxDecoration onboardingBottomWrapDecoration(){
     return BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [R.themeProvider.colors.gradientButton1, Colors.black])
+        gradient: LinearGradient(begin: Alignment.topLeft,end: Alignment.bottomCenter, colors: [R.themeProvider.colors.gradientButton1, Colors.black])
+    );
+  }
+
+  BoxDecoration welcomeBottomWrap(){
+    return  BoxDecoration(
+        gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [Colors.transparent,R.themeProvider.colors.screenBg,])
     );
   }
 

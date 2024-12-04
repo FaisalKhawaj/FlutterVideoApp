@@ -1,5 +1,5 @@
 
-import 'package:fftv/widgets/PrimaryButton.dart';
+import 'package:fftv/widgets/primary_button.dart';
 import 'package:flutter/material.dart';
 import 'package:fftv/resources/resources.dart';
 
@@ -18,8 +18,8 @@ class BottomExploreWrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Container(
-      margin: EdgeInsets.symmetric(horizontal: 15,),
-      padding: EdgeInsets.symmetric(horizontal: 20,vertical: 15) ,
+      margin: const EdgeInsets.symmetric(horizontal: 15,),
+      padding:const EdgeInsets.symmetric(horizontal: 20,vertical: 15) ,
       decoration: R.decorations.onboardingBottomWrapDecoration(),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -30,7 +30,7 @@ class BottomExploreWrapper extends StatelessWidget {
           Text('Dive into our vast collection of blockbuster movies, hidden gems, and exclusive originals.', style: R.textStyle.onboardingDescription(),),
 
           const SizedBox(height: 16,),
-          PrimaryButton(title: 'Watch Now'),
+          PrimaryButton(title: 'Watch Now',handleClick: handleClickWatchNow,),
 
           // Sign in button
           SizedBox(height: 56,

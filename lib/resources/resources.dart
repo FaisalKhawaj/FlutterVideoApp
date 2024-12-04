@@ -3,6 +3,7 @@ import 'package:fftv/resources/Colors.dart';
 import 'package:fftv/resources/decoration_style.dart';
 import 'package:fftv/resources/text_style.dart';
 import 'package:fftv/resources/button_style.dart';
+import 'package:fftv/resources/input_style.dart';
 
 class R{
   static AppColor colors=AppColor();
@@ -10,5 +11,6 @@ class R{
   static AppTextStyle textStyle=AppTextStyle();
   static AppDecoration decorations= AppDecoration();
   static AppButton buttons=AppButton();
+  static AppInputStyle inputStyle=AppInputStyle();
 
 }

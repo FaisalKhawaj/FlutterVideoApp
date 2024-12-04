@@ -12,6 +12,10 @@ class AppColor{
   Color signupText = const Color(0xFFAAA8FE);
   Color appleLoginGradient2=const Color(0xFFBEBEBE);
   Color appleLoginGradient1=const Color(0xFF5F5F5F);
+  Color inputBg=const Color(0xFF232131);
+  Color placeholder=const Color(0xFF9CA3AF);
+  Color selectedTab=const Color(0xFF295bbb);
+  Color unselectedTab=const Color(0xFFa5a4a7);
 
   static AppColor dark(){
     AppColor darkColors = AppColor();
@@ -24,6 +28,10 @@ class AppColor{
     darkColors.signupText= const Color(0xFFAAA8FE);
     darkColors.appleLoginGradient1=const Color(0xFF5F5F5F);
     darkColors.appleLoginGradient2=const Color(0xFFBEBEBE);
+    darkColors.inputBg=const Color(0xFF232131);
+   darkColors.placeholder=const Color(0xFF9CA3AF);
+   darkColors.selectedTab=const Color(0xFF295bbb);
+   darkColors.unselectedTab=const Color(0xFFa5a4a7);
 
     return darkColors;
   }
@@ -39,7 +47,10 @@ class AppColor{
     lightColors.signupText= const Color(0xFFAAA8FE);
     lightColors.appleLoginGradient1=const Color(0xFF5F5F5F);
     lightColors.appleLoginGradient2=const Color(0xFFBEBEBE);
-
+    lightColors.inputBg=const Color(0xFF232131);
+    lightColors.placeholder=const Color(0xFF9CA3AF);
+    lightColors.selectedTab=const Color(0xFF295bbb);
+    lightColors.unselectedTab=const Color(0xFFa5a4a7);
 
     return lightColors;
   }

@@ -24,6 +24,39 @@ return TextStyle(
     );
   }
 
+  TextStyle loginScreenTitle(){
+    return TextStyle(
+        color:R.themeProvider.colors.title,
+        fontSize: 24,
+        fontFamily: 'Poppins',
+        fontWeight: FontWeight.w600
+    );
+  }
+
+  TextStyle inputFieldTitle(){
+    return TextStyle(
+        color: R.themeProvider.colors.title,
+        fontSize: 14,
+        fontWeight: FontWeight.w500,
+        fontFamily: 'Poppins'
+    );
+  }
+
+  TextStyle inputTextStyle(){
+    return TextStyle(
+        color: R.themeProvider.colors.title,
+        fontFamily: 'Poppins',
+        fontWeight: FontWeight.w400,
+        fontSize: 15
+    );
+  }
+  TextStyle inputHintTextStyle(){
+    return TextStyle(
+      color: R.themeProvider.colors.placeholder,
+      // color:,
+    );
+  }
+
   TextStyle onboardingDescription(){
     return TextStyle(
         color: R.themeProvider.colors.description,
@@ -75,6 +108,14 @@ return TextStyle(
         color: R.themeProvider.colors.title,
         fontFamily: 'Poppins',
         fontWeight: FontWeight.w400
+    );
+  }
+
+  TextStyle reelsLikeCount(){
+    return TextStyle(color: R.themeProvider.colors.title,
+        fontSize: 16,
+        fontWeight: FontWeight.w500,
+        fontFamily: 'Poppins'
     );
   }
 }
