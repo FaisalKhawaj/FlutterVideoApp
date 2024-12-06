@@ -20,8 +20,9 @@ class _CustomBottomTabState extends State<CustomBottomTab> {
   int _currentIndex = 0;
 
   final List<Widget> _screens = [
-    Home(),
     Reels(),
+    Home(),
+
     Voting(),
     Profile(),
   ];
@@ -58,11 +59,6 @@ class _CustomBottomTabState extends State<CustomBottomTab> {
             onTap: onItemTapped,
             type: BottomNavigationBarType.fixed,
             items: [
-              BottomNavigationBarItem(
-                backgroundColor: R.themeProvider.colors.screenBg,
-                icon:Icon(Icons.home,size: 30,),
-                label: ''
-              ),
 
               BottomNavigationBarItem(
                   backgroundColor: R.themeProvider.colors.screenBg,
@@ -70,6 +66,14 @@ class _CustomBottomTabState extends State<CustomBottomTab> {
                   label: ''
 
               ),
+
+              BottomNavigationBarItem(
+                backgroundColor: R.themeProvider.colors.screenBg,
+                icon:Icon(Icons.home,size: 30,),
+                label: ''
+              ),
+
+
 
               BottomNavigationBarItem(
                   backgroundColor: R.themeProvider.colors.screenBg,

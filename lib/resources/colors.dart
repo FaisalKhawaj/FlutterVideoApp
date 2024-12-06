@@ -16,6 +16,7 @@ class AppColor{
   Color placeholder=const Color(0xFF9CA3AF);
   Color selectedTab=const Color(0xFF295bbb);
   Color unselectedTab=const Color(0xFFa5a4a7);
+  Color lightGrey=const Color(0xFF63656b);
 
   static AppColor dark(){
     AppColor darkColors = AppColor();
@@ -32,7 +33,7 @@ class AppColor{
    darkColors.placeholder=const Color(0xFF9CA3AF);
    darkColors.selectedTab=const Color(0xFF295bbb);
    darkColors.unselectedTab=const Color(0xFFa5a4a7);
-
+   darkColors.lightGrey=const Color(0xFF63656b);
     return darkColors;
   }
 
@@ -51,7 +52,7 @@ class AppColor{
     lightColors.placeholder=const Color(0xFF9CA3AF);
     lightColors.selectedTab=const Color(0xFF295bbb);
     lightColors.unselectedTab=const Color(0xFFa5a4a7);
-
+    lightColors.lightGrey=const Color(0xFF63656b);
     return lightColors;
   }
 }
