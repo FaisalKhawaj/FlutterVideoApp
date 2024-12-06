@@ -137,11 +137,25 @@ class _ReelsState extends State<Reels> {
         child: VideoPlayer(controller),
         ),
         )
-            : const Center(
-        child: CircularProgressIndicator(),
+            : const Center(child: CircularProgressIndicator(),),
         ),
         ),
-        ),
+
+        if(_isPaused)
+          Center(
+            child: IconButton(
+              style: IconButton.styleFrom(
+                backgroundColor: R.themeProvider.colors.description.withOpacity(0.5),
+              ),
+              icon: Icon(
+                Icons.play_arrow,
+                size: 60.0,
+                color: Colors.white,
+              ),
+              onPressed: _togglePlayPause,
+            ),
+          ),
+
 
 
         ReelsOverlayContent(handleClickWatchDrama: handleClickWatchDrama)
