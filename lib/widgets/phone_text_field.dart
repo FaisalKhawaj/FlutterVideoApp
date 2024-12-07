@@ -3,13 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:fftv/resources/resources.dart';
 
 class PhoneTextField extends StatelessWidget {
-  const PhoneTextField({super.key});
+  final TextEditingController controller;
+
+  const PhoneTextField({super.key,required this.controller});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin:const EdgeInsets.only(top: 10),
       child: TextField(
+        controller: controller,
         keyboardType: TextInputType.phone,
         style: R.textStyle.inputTextStyle(),
         decoration: InputDecoration(

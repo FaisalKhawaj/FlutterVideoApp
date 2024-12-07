@@ -17,15 +17,34 @@ class CustomBottomTab extends StatefulWidget {
 
 class _CustomBottomTabState extends State<CustomBottomTab> {
   // Current selected index for the bottom navigation
+  late String username; // Retrieve data passed from login
+  late List<Widget> _screens;
   int _currentIndex = 0;
 
-  final List<Widget> _screens = [
-    Reels(),
-    Home(),
 
-    Voting(),
-    Profile(),
-  ];
+  @override
+  void initState(){
+    super.initState();
+    final data = Get.arguments as String; // Get the passed data
+
+    if (data is String) {
+      username=data;
+      // Handle username as String
+      print('Username: $username');
+    }else {
+      username = 'Guest'; // Fallback to default
+      print('Unexpected data type, defaulting username to "Guest".');
+    }
+    _screens = [
+      Reels(username: username,),
+      Home(),
+
+      Voting(),
+      Profile(),
+    ];
+  }
+
+
 
   @override
   Widget build(BuildContext context) {

@@ -5,16 +5,20 @@ import 'package:fftv/utils/screen_size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 import 'package:fftv/resources/resources.dart';
+import 'package:get/get.dart';
 
 
 class Reels extends StatefulWidget {
-  const Reels({super.key});
+  final String username; // Retrieve data passed from login
+
+   const Reels({super.key,required this.username});
 
   @override
   State<Reels> createState() => _ReelsState();
 }
 
 class _ReelsState extends State<Reels> {
+
   final List<VideoPlayerController> _controllers = [];
   int _currentIndex = 0;
   bool _isPaused = false;
@@ -120,6 +124,8 @@ class _ReelsState extends State<Reels> {
           controller: _pageController,
           scrollDirection: Axis.vertical,
           onPageChanged: _onPageChanged,
+          itemCount: _controllers.length, // Restrict the range
+
           itemBuilder: (context,index){
         final controller = _controllers[index];
 
@@ -145,7 +151,7 @@ class _ReelsState extends State<Reels> {
           Center(
             child: IconButton(
               style: IconButton.styleFrom(
-                backgroundColor: R.themeProvider.colors.description.withOpacity(0.5),
+                backgroundColor: R.themeProvider.colors.description.withOpacity(0.4),
               ),
               icon: Icon(
                 Icons.play_arrow,
@@ -155,8 +161,6 @@ class _ReelsState extends State<Reels> {
               onPressed: _togglePlayPause,
             ),
           ),
-
-
 
         ReelsOverlayContent(handleClickWatchDrama: handleClickWatchDrama)
 

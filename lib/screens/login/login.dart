@@ -7,12 +7,28 @@ import 'package:fftv/resources/resources.dart';
 import 'package:get/get.dart';
 
 
-class Login extends StatelessWidget {
-  const Login({super.key});
-void handleClick(){
+class Login extends StatefulWidget {
+   Login({super.key});
 
-Get.toNamed(Routes.customBottomTab);
+  @override
+  State<Login> createState() => _LoginState();
 }
+
+class _LoginState extends State<Login> {
+  final phoneController=TextEditingController();
+
+void handleClick(){
+  print(phoneController.text);
+  final  username=phoneController.text;
+Get.toNamed(Routes.customBottomTab,arguments: username);
+}
+
+@override
+void dispose(){
+  phoneController.dispose();
+  super.dispose();
+}
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -35,8 +51,7 @@ Get.toNamed(Routes.customBottomTab);
                       const SizedBox(height: 40,),
                       Text('Phone number',style: R.textStyle.inputFieldTitle()),
 
-                      const  PhoneTextField(),
-
+                        PhoneTextField(controller:phoneController),
                     ],
                   ),
 

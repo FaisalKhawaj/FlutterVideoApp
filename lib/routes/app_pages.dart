@@ -15,14 +15,17 @@ abstract class AppPages{
 
 
   static final List<GetPage> pages=[
-GetPage(name: Routes.welcome, page: ()=>Welcome()),
-    GetPage(name: Routes.onboarding, page: ()=>Onboarding()),
-    GetPage(name: Routes.login, page: ()=>const Login()),
-    GetPage(name: Routes.signup, page: ()=>const Signup()),
+    GetPage(name: Routes.welcome, page: ()=>const Welcome()),
+    GetPage(name: Routes.onboarding, page: ()=>const Onboarding()),
+    GetPage(name: Routes.login, page: ()=> Login()),
+    GetPage(name: Routes.signup, page: ()=> Signup()),
     GetPage(name: Routes.otpVerication, page:()=> const OtpVerification()),
     GetPage(name: Routes.customBottomTab, page: ()=>const CustomBottomTab()),
-    GetPage(name: Routes.voting, page: ()=>Voting()),
-    GetPage(name: Routes.reels, page: ()=>Reels())
+    GetPage(name: Routes.voting, page: ()=>const Voting()),
+    GetPage(name: Routes.reels,  page: (){
+      final username=Get.arguments as String;
+      return  Reels(username:username);
+    })
   ];
 
 }

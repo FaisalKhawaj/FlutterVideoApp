@@ -8,7 +8,8 @@ import 'package:get/get.dart';
 
 
 class Signup extends StatelessWidget {
-  const Signup({super.key});
+   Signup({super.key});
+  final phoneController=TextEditingController();
 
 void handleClick(){
 Get.toNamed(Routes.otpVerication);
@@ -38,7 +39,7 @@ Get.toNamed(Routes.otpVerication);
                   const SizedBox(height: 40,),
                   Text('Phone number',style: R.textStyle.inputFieldTitle()),
                   // Phone Input Field
-                  const PhoneTextField(),
+                   PhoneTextField(controller:phoneController),
 
                   // Phone Input Field ends
 
