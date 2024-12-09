@@ -50,6 +50,7 @@ return TextStyle(
         fontSize: 15
     );
   }
+
   TextStyle inputHintTextStyle(){
     return TextStyle(
       color: R.themeProvider.colors.placeholder,
@@ -116,6 +117,30 @@ return TextStyle(
         fontSize: 16,
         fontWeight: FontWeight.w500,
         fontFamily: 'Poppins'
+    );
+  }
+
+  TextStyle profileRowTitle(){
+    return TextStyle(
+        fontSize: 16,
+        fontFamily: 'Poppins',
+        fontWeight: FontWeight.w500,
+        color: R.themeProvider.colors.lightTitle.withOpacity(0.8));
+  }
+
+  TextStyle subscriptionAmount(){
+    return TextStyle(
+        color: R.themeProvider.colors.blueLine,
+        fontSize: 15,
+        fontWeight: FontWeight.w400,
+        fontFamily: 'Poppins'
+    );
+  }
+
+  TextStyle subscriptionOption(){
+    return TextStyle(
+      color: R.themeProvider.colors.title,
+      fontSize: 15,
     );
   }
 }

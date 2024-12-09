@@ -47,5 +47,26 @@ class AppDecoration{
     );
   }
 
+  BoxDecoration profileButtonWrap(){
+    return  BoxDecoration(
+      color:R.themeProvider.colors.settingBg,
+      borderRadius: BorderRadius.circular(15),
+    );
+  }
+
+  BoxDecoration subscriptionBgWrap(){
+    return BoxDecoration(
+        gradient: LinearGradient(colors: [R.themeProvider.colors.gradientButton1,Colors.black,Colors.black],
+            begin: Alignment.topCenter,end: Alignment.bottomCenter
+        )
+    );
+  }
+
+  BoxDecoration tabButtonStyleWrap(){
+    return BoxDecoration(
+      color: R.themeProvider.colors.title,
+      borderRadius: BorderRadius.circular(30),);
+  }
+
 
 }

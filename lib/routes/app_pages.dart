@@ -6,6 +6,7 @@ import 'package:fftv/screens/onboarding/onboarding.dart';
 import 'package:fftv/screens/otpverification/otp_verification.dart';
 import 'package:fftv/screens/reels/reels.dart';
 import 'package:fftv/screens/signup/signup.dart';
+import 'package:fftv/screens/subscription/subscription.dart';
 import 'package:fftv/screens/voting/voting.dart';
 import 'package:fftv/screens/welcome/welcome.dart';
 import 'package:fftv/widgets/custom_bottom_tab.dart';
@@ -22,6 +23,7 @@ abstract class AppPages{
     GetPage(name: Routes.otpVerication, page:()=> const OtpVerification()),
     GetPage(name: Routes.customBottomTab, page: ()=>const CustomBottomTab()),
     GetPage(name: Routes.voting, page: ()=>const Voting()),
+    GetPage(name: Routes.subscription, page: ()=>const Subscription()),
     GetPage(name: Routes.reels,  page: (){
       final username=Get.arguments as String;
       return  Reels(username:username);

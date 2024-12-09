@@ -10,6 +10,7 @@ abstract class Routes{
   static const customBottomTab='/CustomBottomTab';
   static const voting='/Voting';
   static const reels='/Reels';
+  static const subscription='/Subscription';
 
 
 }
