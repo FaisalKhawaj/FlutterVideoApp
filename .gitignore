@@ -63,5 +63,7 @@ flutter_launcher_icons/
 
 # Flutter build outputs
 build/
+build/app/
+build/app/outputs/apk
 
 
