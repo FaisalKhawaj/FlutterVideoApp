@@ -2,6 +2,8 @@
 import 'package:fftv/screens/reels/widgets/reels_overlay_content.dart';
 import 'package:fftv/screens/reels/widgets/watch_full_drama_button.dart';
 import 'package:fftv/utils/screen_size_config.dart';
+import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 import 'package:fftv/resources/resources.dart';
@@ -115,6 +117,10 @@ class _ReelsState extends State<Reels> {
         _isPaused = false;
       }
     });
+  }
+
+  void handleList(){
+    // showCupertinoModalBottomSheet()
   }
 
   @override

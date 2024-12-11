@@ -1,5 +1,6 @@
 
 import 'package:fftv/screens/reels/widgets/watch_full_drama_button.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fftv/resources/resources.dart';
 
@@ -29,7 +30,42 @@ class ReelsOverlayContent extends StatelessWidget {
                 Icon(Icons.star,size: 30, color: R.themeProvider.colors.title,),
                 Text('37',style: R.textStyle.reelsLikeCount(),),
                 SizedBox(height: 20,),
-                Icon(Icons.stacked_bar_chart,size: 30, color: R.themeProvider.colors.title,),
+               IconButton(onPressed: (){
+                 showCupertinoModalPopup(context: context, builder: (BuildContext context)=>
+                   CupertinoActionSheet(
+                     title: const Text('Title'),
+                     message: const Text('Message'),
+                     actions: <CupertinoActionSheetAction>[
+                     CupertinoActionSheetAction(
+                     /// This parameter indicates the action would be a default
+                     /// default behavior, turns the action's text to bold text.
+                     isDefaultAction: true,
+                     onPressed: () {
+                       Navigator.pop(context);
+                     },
+                     child: const Text('Default Action'),
+                   ),
+                       CupertinoActionSheetAction(
+                         onPressed: () {
+                           Navigator.pop(context);
+                         },
+                         child: const Text('Action'),
+                       ),
+                       CupertinoActionSheetAction(
+                         /// This parameter indicates the action would perform
+                         /// a destructive action such as delete or exit and turns
+                         /// the action's text color to red.
+                         isDestructiveAction: true,
+                         onPressed: () {
+                           Navigator.pop(context);
+                         },
+                         child: const Text('Destructive Action'),
+                       ),
+
+                   ]
+                   )
+                 );
+               }, icon: Icon(Icons.stacked_bar_chart,size: 30, color: R.themeProvider.colors.title,)) ,
                 Text('List',style: R.textStyle.reelsLikeCount(),),
                 SizedBox(height: 20,),
                 Icon(Icons.share,size: 30, color: R.themeProvider.colors.title,),
